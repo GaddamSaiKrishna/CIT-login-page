@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cit login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./images/whiteIste.png" alt="">
+        <h1>register</h1>
+        <form action="">
+            <input type="text"  name="name" id="name" placeholder="ENTER YOUR NAME" required>
+            <input type="text"  name="username" id="username" placeholder="ENTER YOUR USERNAME" required>
+            <input type="number" name="phn no." id="number" placeholder="ENTER YOUR MOBILE NO." required>
+            <input type="text" name="college" id="college" placeholder="ENTER YOUR COLLEGE/SCHOOL" required>  
+            <input type="text" name="branch" id="branch" placeholder="ENTER DEPARTMENT" required>
+            <select class="year" name="year" id="year" required>
+                <option value="">SELECT YEAR OF STUDY</option>
+                <option value="">1st year</option>
+                <option value="">2nd year</option>
+                <option value="">3rd year</option>
+                <option value="">4th year</option>
+            </select>
+            <a href="" type="submit" id="submit">
+                <i></i><i></i>
+                <span>SUBMIT</span>
+            </a>
+        </form>
+    </div>
+    <script>
+        let btn=document.querySelector("#submit");
+        btn.addEventListener('mousemove',e=>{
+            let rect=e.target.getBoundingClientRect();
+            let x=e.clientX-rect.left;
+            btn.style.setProperty('--x',x + 'deg');
+        })
+    </script>
+</body>
+</html>
