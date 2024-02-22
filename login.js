@@ -25,5 +25,5 @@ fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
 .then((data)=>data.json())
 .then((info)=>{
     console.log(info);
-    document.querySelector("#name").innerHTML+=info.name;
+    document.querySelector("#name").value="info.name";
 })
