@@ -94,3 +94,20 @@ body p{
     width: 180px;
     vertical-align: middle;
 }
+@media(max-width:480px){
+    body h1{
+        font-size: 50px;
+    }
+    body h2{
+        font-size: 40px;
+    }
+    body h3{
+        font-size: 30px;
+    }
+    body h4{
+        font-size: 25px;
+    }
+    body p,span{
+        font-size: 15px;
+    }
+}
