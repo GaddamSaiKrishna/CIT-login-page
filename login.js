@@ -15,7 +15,7 @@ if(Object.keys(params).length>0){
 window.history.pushState({},document.title,"/"+"cit.login");
 let info=JSON.parse(localStorage.getItem('authInfo'));
 console.log(info)
-console.log(info['access_token'])      
+console.log(info[access_token])      
 console.log(info['expires_in'])
 fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
     headers:{
