@@ -25,5 +25,7 @@ fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
 .then((data)=>data.json())
 .then((info)=>{
     console.log(info);
-    document.querySelector("#name").setAttribute('value','info.name');
+    var nameValue='info.name';
+    console.log(nameValue);
+   document.querySelector("#name").value=nameValue;
 })
