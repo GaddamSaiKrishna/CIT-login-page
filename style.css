@@ -261,6 +261,10 @@ body a,span,i{
         margin-bottom: 10px;
     }
     .home-image{
-        width: 70%;
+        width: auto;
+        height: 150px;
+    }
+    .logo{
+        width: 80px;
     }
 }
