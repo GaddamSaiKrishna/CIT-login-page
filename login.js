@@ -12,7 +12,7 @@ while (m=regex.exec(location.href)) {
 if(Object.keys(params).length>0){
     localStorage.setItem('authInfo',JSON.stringify(params))
 }
-window.history.pushState({},document.title,"/"+"cit.login");
+window.history.pushState({},document.title,"/"+"CIT-login-page/login.html");
 let info=JSON.parse(localStorage.getItem('authInfo'));
 console.log(JSON.parse(localStorage.getItem('authInfo')))
 console.log(info['access_token'])      
