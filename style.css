@@ -136,13 +136,13 @@ body a,span,i{
 }
 /* homeright section */
 .home-right{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .home-image{
-    width: 400px;
+    width: 450px;
 }
 /* follow us */
 .social-links{
@@ -262,6 +262,5 @@ body a,span,i{
     }
     .home-image{
         width: 70%;
-        height: 200px;
     }
 }
