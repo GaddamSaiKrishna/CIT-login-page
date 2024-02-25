@@ -30,40 +30,39 @@
         </form>
     </div>
     <script src="./login.js"></script>
+   <!-- to store data -->
     <script type="module">
-          // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-  import { getAnalytics, ref, set,get,child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCNVimI7lPm6t23lvjTu30o8QG3PqSLMw0",
-    authDomain: "inner-suprstate-415019.firebaseapp.com",
-    projectId: "inner-suprstate-415019",
-    storageBucket: "inner-suprstate-415019.appspot.com",
-    messagingSenderId: "581333481597",
-    appId: "1:581333481597:web:1641d408c36b3539671914",
-    measurementId: "G-TW6DNPH6H1"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getAnalytics(app);
-  document.querySelector("#submit").addEventListener("click",function(e){
-    e.preventDefault();
-    set(ref(db,'user/' + document.querySelector("#name").value),
-    {
-        name: document.querySelector("#name").value,
-        username: document.querySelector("#username").value,
-        phnno: document.querySelector("#number").value,
-        college: document.querySelector("#college").value,
-        branch: document.querySelector("#branch").value
-    });
-    alert("login successful !")
-  })
-    </script>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAnalytics, ref, set,get,child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAKRlx5DB6xKBdVqIVmdXcPuxcuBQ8Rves",
+          authDomain: "cit-7b09e.firebaseapp.com",
+          projectId: "cit-7b09e",
+          storageBucket: "cit-7b09e.appspot.com",
+          messagingSenderId: "350103973253",
+          appId: "1:350103973253:web:d07b8c2504f3355a5968ec"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getAnalytics(app);
+        document.querySelector("#submit").addEventListener("click",function(e){
+        e.preventDefault();
+        set(ref(db,'user/' + document.querySelector("#name").value),
+        {
+            name: document.querySelector("#name").value,
+            username: document.querySelector("#username").value,
+            phnno: document.querySelector("#number").value,
+            college: document.querySelector("#college").value,
+            branch: document.querySelector("#branch").value
+        });
+        alert("login successful !")
+    })
+      </script>
 </body>
 </html>

@@ -67,8 +67,8 @@ body a,span,i{
 .logo{
     width: 100px;
     position: relative;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     z-index: 999;
 }
 /* home section */
@@ -175,6 +175,10 @@ body a,span,i{
         vertical-align: middle;
         margin-bottom: 10px;
     }
+    .home-image{
+        width: auto;
+        height: 200px;
+    }
 }
 @media (max-width:500px){
     .home{
@@ -199,5 +203,6 @@ body a,span,i{
     }
     .logo{
         width: 80px;
+        left: 20px;
     }
 }
