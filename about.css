@@ -96,10 +96,10 @@ body p{
 }
 @media(max-width:480px){
     body h1{
-        font-size: 50px;
+        font-size: 40px;
     }
     body h2{
-        font-size: 40px;
+        font-size: 35px;
     }
     body h3{
         font-size: 30px;
@@ -108,6 +108,12 @@ body p{
         font-size: 25px;
     }
     body p,span{
-        font-size: 15px;
+        font-size: 13px;
+    }
+    .logo{
+        width: 80px;
+    }
+    .header i{
+        font-size: 40px;
     }
 }
