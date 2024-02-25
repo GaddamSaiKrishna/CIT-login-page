@@ -57,11 +57,12 @@ input,.year{
     border: none;
     border-bottom: 2px solid white;
     padding: 5px;
-    font-size: 14px;
+    font-size: 15px;
     color: white;
     opacity: 0.8;
     letter-spacing: 2px;
     /* width: 90%; */
+    text-transform: uppercase;
 }
 input:hover{
     opacity: 1.2;
