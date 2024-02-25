@@ -220,6 +220,11 @@ body a,span,i{
     .home{
         flex-direction: column-reverse;
     }
+    .buttons{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media (max-width:500px){
     .home{
