@@ -26,10 +26,10 @@
             <input type="text" name="branch" id="branch" placeholder="ENTER DEPARTMENT" required>
             <select class="year" name="year" id="year" required>
                 <option value="">SELECT YEAR OF STUDY</option>
-                <option value="">1st year</option>
-                <option value="">2nd year</option>
-                <option value="">3rd year</option>
-                <option value="">4th year</option>
+                <option value="1st year">1st year</option>
+                <option value="2nd year">2nd year</option>
+                <option value="3rd year">3rd year</option>
+                <option value="4th year">4th year</option>
             </select>
             <a href="" type="submit" id="submit">
                 <i></i><i></i>
@@ -63,10 +63,11 @@
             set(ref(db, 'user/' + document.querySelector("#name").value),
             {
                 name: document.querySelector("#name").value,
-                username: document.querySelector("#username").value,
-                phnno: document.querySelector("#number").value,
+                userName: document.querySelector("#username").value,
+                phnNo: document.querySelector("#number").value,
                 college: document.querySelector("#college").value,
-                branch: document.querySelector("#branch").value
+                branch: document.querySelector("#branch").value,
+                year:document.querySelector("#year").value
             });
             alert("login successful");
         })
