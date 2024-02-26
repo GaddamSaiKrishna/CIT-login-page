@@ -19,7 +19,7 @@ function signIn(){
         "client_id":"581333481597-8rrrin5jg3kcaum95m572qrvk02gjp9p.apps.googleusercontent.com",
         "redirect_uri":"https://gaddamsaikrishna.github.io/CIT-login-page/login.html",
         "response_type":"token", //token or code
-        "scope":"https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/youtube.readonly",
+        "scope":"https://www.googleapis.com/auth/userinfo.profile",
         "include_granted_scopes":'true',
         'state':'pass-through-value'
     }
