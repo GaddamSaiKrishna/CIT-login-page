@@ -51,13 +51,25 @@ body a,span,i{
     height: 90%;
     /* min-height: fit-content; */
     background-color: transparent;
-    border: 6px solid rgba(255, 255,255 , 0.8);
+    border: 3px solid #fff;
     justify-content: center;
     align-items: center;
     position: relative;
     top: 5%;
     margin: auto;
     border-radius: 40px;
+    animation: glow 5s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    0%{
+        box-shadow: 0;
+    }
+    50% {
+        box-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #fff, 0 0 15px #fff, 0 0 18px #fff, 0 0 21px #fff;
+    }
+    100% {
+        box-shadow: 0;
+    }
 }
 /* header section */
 .header{

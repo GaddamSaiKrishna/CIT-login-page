@@ -15,7 +15,6 @@ body h1{
     font-size: 60px;
     display: inline-block;
     margin: 0;
-    text-decoration: underline;
 }
 body h2{
     font-size: 50px;
@@ -43,7 +42,6 @@ body p{
 .wrapper{
     position:absolute;
     width: 100%;
-    /* height: calc(fit-content + 200px); */
     overflow: hidden;
     background-image: url(./images/bg2.jpg.avif);
     background-repeat: no-repeat;
@@ -51,19 +49,27 @@ body p{
     background-attachment: fixed;
 }
 .container{
-    /* position: relative;
-    top: 5%;
-    margin: auto; */
     display: flex;
     flex-direction: column;
     width: 90%;
     height: fit-content;
-    border: 6px solid rgba(255, 255,255 , 0.8);
+    border: 3px solid #fff;
     justify-content: center;
     align-items: center;
     border-radius: 40px;
     margin: 5%;
-    /* padding-bottom: 100px; */
+    animation: glow 5s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    0%{
+        box-shadow: 0;
+    }
+    50% {
+        box-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #fff, 0 0 15px #fff, 0 0 18px #fff, 0 0 21px #fff;
+    }
+    100% {
+        box-shadow: 0;
+    }
 }
 .header{
     height: 120px;
@@ -84,7 +90,7 @@ body p{
     top: 20px;
     right: 20px;
     cursor: pointer;
-    color: white;
+    color: #fff;
 }
 .about-container{
     width: 80%;

@@ -28,13 +28,47 @@ body h1{
 .container{
     width: 90%;
     height: 90%;
-    border: 6px solid rgba(255, 255,255 , 0.8);
+    border: 3px solid #fff;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: glow 5s ease-in-out infinite alternate;
 }
+@keyframes glow {
+    0%{
+        box-shadow: 0;
+    }
+    50% {
+        box-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #fff, 0 0 15px #fff, 0 0 18px #fff, 0 0 21px #fff;
+    }
+    100% {
+        box-shadow: 0;
+    }
+}
+/* .container::after{
+    filter: blur(40px);
+} */
+/* .glow::before ,.glow::after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    animation: animate 5s linear infinite;
+} */
+/* @keyframes animate{
+    0%{
+        filter: blur(0);
+    }
+    50%{
+        filter: blur(50%);
+    }
+    100%{
+        filter: blur(0);
+    }
+} */
+
 .container img{
     position: absolute;
     top: 7%;
