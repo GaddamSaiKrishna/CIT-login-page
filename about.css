@@ -10,6 +10,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+/* font styling */
 body h1{
     font-family: "Protest Revolution", sans-serif;
     font-size: 60px;
@@ -39,6 +40,7 @@ body p{
     display: inline-block;
     margin: 0;
 }
+/* layout */
 .wrapper{
     position:absolute;
     width: 100%;
@@ -53,24 +55,26 @@ body p{
     flex-direction: column;
     width: 90%;
     height: fit-content;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     justify-content: center;
     align-items: center;
     border-radius: 40px;
     margin: 5%;
-    animation: glow 5s ease-in-out infinite alternate;
+    animation: glow 4s ease-in-out infinite alternate;
 }
+/* glowing container */
 @keyframes glow {
     0%{
-        box-shadow: 0;
+        box-shadow: 0 0 0.1px #fff;
     }
     50% {
-        box-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #fff, 0 0 15px #fff, 0 0 18px #fff, 0 0 21px #fff;
+        box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 12px #fff, 0 0 14px #fff;
     }
     100% {
-        box-shadow: 0;
+        box-shadow: 0 0 0.1px #fff;
     }
 }
+/* logo and back button section */
 .header{
     height: 120px;
     width: 100%;
@@ -78,12 +82,14 @@ body p{
     flex-direction: row;
     justify-content: space-between;   
 }
+/* logo */
 .logo{
     width: 100px;
     position: relative;
     top: 10px;
     left: 10px;
 }
+/* back button */
 .header i{
     font-size: 50px;
     position: relative;
@@ -92,16 +98,19 @@ body p{
     cursor: pointer;
     color: #fff;
 }
+/* content */
 .about-container{
     width: 80%;
     text-align: center;
     height: 90%;
     min-height: fit-content;
 }
+/* sponsers image */
 .about-container img{
     width: 180px;
     vertical-align: middle;
 }
+/* responsive */
 @media(max-width:480px){
     body h1{
         font-size: 40px;

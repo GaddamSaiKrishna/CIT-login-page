@@ -19,62 +19,45 @@ body{
     color: #fff;
     font-family: "Poppins", sans-serif;
 }
+/* layout */
+.container{
+    width: 90%;
+    height: 90%;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: glow 4s ease-in-out infinite alternate;
+}
+/* glowing container */
+@keyframes glow {
+    0%{
+        box-shadow: 0 0 0.1px #fff;
+    }
+    50% {
+        box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 12px #fff, 0 0 14px #fff;
+    }
+    100% {
+        box-shadow: 0 0 0.1px #fff;
+    }
+}
+/* font styling */
 body h1{
     font-family: "Protest Revolution", sans-serif;
     font-size: 60px;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
-.container{
-    width: 90%;
-    height: 90%;
-    border: 3px solid #fff;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: glow 5s ease-in-out infinite alternate;
-}
-@keyframes glow {
-    0%{
-        box-shadow: 0;
-    }
-    50% {
-        box-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #fff, 0 0 15px #fff, 0 0 18px #fff, 0 0 21px #fff;
-    }
-    100% {
-        box-shadow: 0;
-    }
-}
-/* .container::after{
-    filter: blur(40px);
-} */
-/* .glow::before ,.glow::after{
-    content: '';
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    animation: animate 5s linear infinite;
-} */
-/* @keyframes animate{
-    0%{
-        filter: blur(0);
-    }
-    50%{
-        filter: blur(50%);
-    }
-    100%{
-        filter: blur(0);
-    }
-} */
-
+/* logo */
 .container img{
     position: absolute;
     top: 7%;
     left: 7%;
     width: 100px;
 }
+/* form layout */
 form{
     display: flex;
     flex-direction: column;
@@ -82,6 +65,7 @@ form{
     align-items: center;
     width: 100%;
 }
+/* input boxes  */
 input,.year{
     width: 500px;
     height: 50px;
@@ -95,11 +79,10 @@ input,.year{
     color: white;
     opacity: 0.8;
     letter-spacing: 2px;
-    /* width: 90%; */
     text-transform: uppercase;
 }
 input:hover{
-    opacity: 1.2;
+    opacity: 2;
 }
 .year{
     background-color:#00092f;
@@ -109,6 +92,7 @@ input:hover{
     border: none;
     margin-top: 15px;
 }
+/* submit button  */
 #submit{
     position: relative;
     width: 150px;
@@ -146,6 +130,7 @@ input:hover{
     border-radius: 3px;
     background: rgba(14, 21, 56, 0.65);
 }
+/* responsive */
 @media (max-width:600px){
    body h1{
     font-size: 40px;
