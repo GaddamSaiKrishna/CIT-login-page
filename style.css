@@ -90,8 +90,9 @@ body a,span,i{
     min-height: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    float: left;
 }
 /* homeleft section */
 .home-left{
@@ -148,6 +149,7 @@ body a,span,i{
 }
 /* homeright section */
 .home-right{
+    float: left;
     width: 40%;
     display: flex;
     justify-content: center;
