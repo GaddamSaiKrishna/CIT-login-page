@@ -17,7 +17,7 @@ function signIn(){
     form.setAttribute('method','GET');
     form.setAttribute('action',oauth2Endpoint);
     let params ={
-        "client_id":"581333481597-8rrrin5jg3kcaum95m572qrvk02gjp9p.apps.googleusercontent.com",
+        "client_id":"410888507524-e09ulgmbukdccnh11do2hpmfm23rfdrd.apps.googleusercontent.com",
         "redirect_uri":"https://gaddamsaikrishna.github.io/CIT-login-page/login.html",
         "response_type":"token",
         "scope":"https://www.googleapis.com/auth/userinfo.profile",
