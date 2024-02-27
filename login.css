@@ -140,7 +140,6 @@ input:hover{
 @media (max-width:600px){
    body h1{
     font-size: 40px;
-    margin-bottom: auto;
    }
     input,.year{
         width:320px;
@@ -155,7 +154,6 @@ input:hover{
     input,.year{
         width: 250px;
         font-size: 12px;
-        margin: 0;
     }
 }
 /* welcome page */
