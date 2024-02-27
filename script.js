@@ -7,7 +7,7 @@ btn1.addEventListener('mousemove',e=>{
 })
 btn2.addEventListener('mousemove',e=>{
     let rect=e.target.getBoundingClientRect();
-    let x=e.clientX-rect.left;
+    let x=e.clientX*3-rect.left;
     btn2.style.setProperty('--x',x + 'deg');
 })
 
