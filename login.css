@@ -22,6 +22,7 @@ body{
 /* layout */
 .container{
     width: 90%;
+    min-height: fit-content;
     height: 90%;
     border: 2px solid #fff;
     border-radius: 40px;
@@ -43,12 +44,16 @@ body{
         box-shadow: 0 0 0.1px #fff;
     }
 }
+.header{
+    width: 100%;
+}
 /* font styling */
 body h1{
     font-family: "Protest Revolution", sans-serif;
     font-size: 60px;
     text-transform: uppercase;
     margin-bottom: 30px;
+    text-align: center;
 }
 /* logo */
 .container img{
@@ -142,4 +147,22 @@ input:hover{
     .container img{
         width: 80px;
     }
+}
+/* welcome page */
+.hidden{
+    display: none;
+}
+.wel{
+    padding: 10px;
+    
+}
+.wel h2{
+    font-size: 30px;
+}
+.wel h3{
+    font-size: 25px;
+    text-align: center;
+}
+.wel li{
+    font-size: 20px;
 }

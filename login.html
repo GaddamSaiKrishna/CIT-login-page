@@ -14,31 +14,42 @@
 </head>
 <body>
     <div class="container">
-        <!-- logo -->
-        <img src="./images/whiteIste.png" alt="">
-        <h1>register!</h1>
-        <!-- login form -->
-        <form action="" id="loginForm">
-            <input type="text" name="name" id="name" placeholder="ENTER YOUR NAME" required>
-            <input type="text"  name="username" id="username" placeholder="ENTER YOUR USERNAME" required>
-            <input type="number" name="phn no." id="number" placeholder="ENTER YOUR MOBILE NO." required>
-            <input type="text" name="college" id="college" placeholder="ENTER YOUR COLLEGE/SCHOOL" required>  
-            <input type="text" name="branch" id="branch" placeholder="ENTER DEPARTMENT" required>
-            <select class="year" name="year" id="year" required>
-                <option value="">SELECT YEAR OF STUDY</option>
-                <option value="1st year">1st year</option>
-                <option value="2nd year">2nd year</option>
-                <option value="3rd year">3rd year</option>
-                <option value="4th year">4th year</option>
-            </select>
-            <a href="" type="submit" id="submit">
-                <i></i><i></i>
-                <span>SUBMIT</span>
-            </a>
-        </form>
+        <div class="reg ">
+            <!-- logo -->
+            <div class="header">
+                <img src="./images/whiteIste.png" alt="">
+            </div>
+            <h1>register!</h1>
+            <!-- login form -->
+            <form action="" id="loginForm">
+                <input type="text" name="name" id="name" placeholder="ENTER YOUR NAME" required>
+                <input type="text"  name="username" id="username" placeholder="ENTER YOUR USERNAME" required>
+                <input type="number" name="phn no." id="number" placeholder="ENTER YOUR MOBILE NO." required>
+                <input type="text" name="college" id="college" placeholder="ENTER YOUR COLLEGE/SCHOOL" required>  
+                <input type="text" name="branch" id="branch" placeholder="ENTER DEPARTMENT" required>
+                <select class="year" name="year" id="year" required>
+                    <option value="">SELECT YEAR OF STUDY</option>
+                    <option value="1st year">1st year</option>
+                    <option value="2nd year">2nd year</option>
+                    <option value="3rd year">3rd year</option>
+                    <option value="4th year">4th year</option>
+                </select>
+                <a href="" type="submit" id="submit">
+                    <i></i><i></i>
+                    <span>SUBMIT</span>
+                </a>
+            </form>
+        </div>
+        <div class="wel hidden">
+            <h2>Welcome to your account!</h2><br>
+            <h3>Your account details :</h3> <br>
+        </div>
     </div>
     <script src="./login.js"></script>
     <script type="module" >
+        let reg=document.querySelector(".reg");
+        let wel=document.querySelector(".wel");
+        
                 // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getDatabase, ref, set, get, child} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
@@ -59,6 +70,14 @@
         const db = getDatabase(app);
 
         document.querySelector("#submit").addEventListener('click',function(e){
+
+            var name=document.querySelector("#name").value;
+            var userName=document.querySelector("#username").value;
+            var phnNo=document.querySelector("#number").value;
+            var college=document.querySelector("#college").value;
+            var branch=document.querySelector("#branch").value;
+            var year=document.querySelector("#year").value;
+
             e.preventDefault();
             set(ref(db, 'user/' + document.querySelector("#name").value),
             {
@@ -69,8 +88,35 @@
                 branch: document.querySelector("#branch").value,
                 year:document.querySelector("#year").value
             });
-            alert("login successful");
+            reg.classList.add("hidden")
+            wel.classList.remove("hidden")
+
+            //to display data
+            var li1=document.createElement("li")
+            li1.innerHTML="NAME : " + name;
+            wel.appendChild(li1);
+
+            var li2=document.createElement("li")
+            li2.innerHTML="USERNAME : " + userName;
+            wel.appendChild(li2);
+
+            var li2=document.createElement("li")
+            li2.innerHTML="PHN-NO. : " + phnNo;
+            wel.appendChild(li2);
+
+            var li2=document.createElement("li")
+            li2.innerHTML="COLLEGE : " + college;
+            wel.appendChild(li2);
+
+            var li2=document.createElement("li")
+            li2.innerHTML="BRANCH : " + branch;
+            wel.appendChild(li2);
+
+            var li2=document.createElement("li")
+            li2.innerHTML="YEAR : " + year;
+            wel.appendChild(li2);
         })
+       
     </script>
 </body>
 </html>

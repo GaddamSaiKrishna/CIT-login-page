@@ -47,7 +47,6 @@ body a,span,i{
 .container{
     display: flex;
     flex-direction: column;
-    /* width: 90%; */
     height: 90%;
     min-height: fit-content;
     background-color: transparent;
@@ -56,9 +55,6 @@ body a,span,i{
     align-items: center;
     margin: 5%;
     padding: 10px;
-    /* position: relative;
-    top: 5%;
-    margin: auto; */
     border-radius: 40px;
     animation: glow 4s ease-in-out infinite alternate;
 }
@@ -143,6 +139,7 @@ body a,span,i{
     align-items: center;
     text-transform: uppercase;
     color: white;
+    font-weight: bold;
     letter-spacing: 2px;
     border: 1px solid #040a29;
     border-radius: 3px;
