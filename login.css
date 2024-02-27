@@ -141,11 +141,17 @@ input:hover{
     font-size: 40px;
    }
     input,.year{
-        width:80%;
+        width:320px;
         margin: 6px;
     }
     .container img{
         width: 80px;
+    }
+}
+@media(max-width:400px){
+    input,.year{
+        width: 100%;
+        font-size: 10px;
     }
 }
 /* welcome page */
