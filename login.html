@@ -21,7 +21,7 @@
         <div class="reg">
             <h1>register!</h1>
             <!-- login form -->
-            <form action="" id="loginForm">
+            <form  id="loginForm" onsubmit="submitForm(e)">
                 <input type="text" name="name" id="name" placeholder="ENTER YOUR NAME" required>
                 <input type="text"  name="username" id="username" placeholder="ENTER YOUR USERNAME" required="">
                 <input type="number" name="phn no." id="number" placeholder="ENTER YOUR MOBILE NO." required>
@@ -39,6 +39,7 @@
                     <i></i><i></i>
                     <span>SUBMIT</span>
                 </button>
+                
             </form>
         </div>
         <div class="wel hidden">
@@ -70,8 +71,8 @@
         //get ref to database services
         const db = getDatabase(app);
 
-        document.querySelector("#submit").addEventListener('click',function(e){
-
+        function submitForm(e){
+            e.preventDefault();
             var name=document.querySelector("#name").value;
             var userName=document.querySelector("#username").value;
             var phnNo=document.querySelector("#number").value;
@@ -79,7 +80,7 @@
             var branch=document.querySelector("#branch").value;
             var year=document.querySelector("#year").value;
 
-            e.preventDefault();
+            
             set(ref(db, 'user/' + document.querySelector("#name").value),
             {
                 name: document.querySelector("#name").value,
@@ -116,7 +117,7 @@
             var li2=document.createElement("li")
             li2.innerHTML="YEAR : " + year;
             wel.appendChild(li2);
-        })
+        }
        
     </script>
 </body>
