@@ -240,4 +240,7 @@ body a,span,i{
         width: 80px;
         left: 10px;
     }
+    .container{
+        height: fit-content;
+    }
 }
